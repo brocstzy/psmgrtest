@@ -1,0 +1,23 @@
+﻿<Window x:Class="psmgrtest.AddCompanyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:psmgrtest"
+        mc:Ignorable="d"
+        Title="AddCompanyWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="300">
+            <Label Content="Имя компании:"/>
+            <TextBox x:Name="companyName_TextBox"
+                     />
+            <Button x:Name="addCompany_Button"
+                    Click="addCompany_Button_Click"
+                    Content="Добавить"
+                    Margin="0,15,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

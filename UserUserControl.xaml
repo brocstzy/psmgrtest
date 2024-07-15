@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="psmgrtest.UserUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:psmgrtest"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Margin="20">
+
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="Gray"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="Логин"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="login_TextBox"
+                         IsReadOnly="True"/>
+                <Button x:Name="copyLogin_Button"
+                        Click="copyLogin_Button_Click"
+                        Grid.Column="1">
+                    <Image Source="copy.png"
+                           />
+                </Button>
+            </Grid>
+            <Label Content="Пароль"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <PasswordBox x:Name="password_PasswordBox"
+                             Focusable="False"
+                             IsHitTestVisible="False"/>
+                <TextBox x:Name="password_TextBox"
+                             IsReadOnly="True"
+                         Visibility="Collapsed"/>
+                <Button x:Name="copyPassword_Button"
+                        Click="copyPassword_Button_Click"
+                        Grid.Column="1">
+                    <Image Source="copy.png"/>
+                </Button>
+                <Button x:Name="togglePassword_Button"
+                        Click="togglePassword_Button_Click"
+                        Grid.Column="2">
+                    <Image Source="eye.png"/>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
