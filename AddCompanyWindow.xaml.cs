@@ -34,5 +34,14 @@ namespace psmgrtest
                 this.Close();
             }
         }
+
+        private void companyName_TextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                addCompany_Button_Click(null, null);
+            }
+
+        }
     }
 }

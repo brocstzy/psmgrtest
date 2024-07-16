@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:psmgrtest"
         mc:Ignorable="d"
-        Title="AddCompanyWindow" Height="450" Width="800">
+        Title="AddCompanyWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical"
                     HorizontalAlignment="Center"
@@ -13,7 +14,7 @@
                     Width="300">
             <Label Content="Имя компании:"/>
             <TextBox x:Name="companyName_TextBox"
-                     />
+                     KeyUp="companyName_TextBox_KeyUp"/>
             <Button x:Name="addCompany_Button"
                     Click="addCompany_Button_Click"
                     Content="Добавить"

@@ -37,7 +37,7 @@ namespace psmgrtest
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            new AddCompanyWindow().Show();
+            new AddCompanyWindow() { Owner = this}.ShowDialog();
         }
 
         public void RefreshPasswords()

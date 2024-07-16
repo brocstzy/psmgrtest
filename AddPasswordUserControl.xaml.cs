@@ -27,7 +27,7 @@ namespace psmgrtest
 
         private void addPasswordButton_Click(object sender, RoutedEventArgs e)
         {
-            new AddPasswordWindow(Application.Current.Windows.OfType<MainWindow>().FirstOrDefault()!.SelectedCompany).Show();
+            new AddPasswordWindow(Application.Current.Windows.OfType<MainWindow>().FirstOrDefault()!.SelectedCompany) { Owner = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault()!}.ShowDialog();
         }
     }
 }
